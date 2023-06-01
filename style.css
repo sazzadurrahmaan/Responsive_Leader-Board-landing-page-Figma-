@@ -84,13 +84,7 @@ hr {
 
 
 /*course style*/
-.container2 {
-    background-color: #FFFFFF;
-    width: 870px;
-    height: 362px;
-    padding: 30px;
-    margin-top:30px;
-}
+
 .courseImage img{
     width: 224px;
 height: 104px;
@@ -131,4 +125,39 @@ height: 104px;
     height: 312px;
     box-shadow: inset 0 -2em 2em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+/* responsive for mobile*/
+@media only screen and (max-width:688px) {
+    .container{
+        width:100%;
+      
+    }
+    .section-title {
+        text-align: center;
+    }
+    .playersTop,.blogSection,.lates-courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player,.topBlogs{
+        flex-direction: column;
+    }
+    .lates-courses{
+        row-gap: 20px;
+        justify-items: center;
+    }
+
+
+}
+
+
+/*responsive for tablet*/
+
+@media only screen and (min-width: 689) and (max-width: 991px) {
+   .container{
+    width: 100%;
+   }
+    .playersTop,.blogSection,.lates-courses{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
